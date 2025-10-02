@@ -1,0 +1,12 @@
+{
+  "name": "flight-checker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "playwright": "^1.55.1"
+  }
+}
