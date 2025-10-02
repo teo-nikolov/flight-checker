@@ -35,7 +35,7 @@ async function sendTelegramMessage(text) {
   }]);
 
   for (const [route, url] of flights.entries()) {
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url + '&curr=BGN', { waitUntil: 'networkidle' });
 
     try {
       const priceText = await page.textContent('//div[text()="Cheapest"]/span/span/div/span/span');
