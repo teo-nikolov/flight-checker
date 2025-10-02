@@ -42,7 +42,7 @@ async function sendTelegramMessage(text) {
       if (priceText) {
         const price = parseInt(priceText.split('\u00A0')[1]);
         const parts = route.split('|');
-        console.log(`${parts[0]} (${parts[1]}): ${price} лв.`);
+        console.log(`${parts[0]} (${parts[1]}): ${priceText}`);
         if ((route.includes('WMI') && price < 50) || (route.includes('PRG') && price < 70)) {
           const text = `*⚠️⚠️⚠️ Low Price Alert! ⚠️⚠️⚠️*\n${parts[0]} just *${price} лв.* ✈️\nConcert: *${parts[1]}*\n[CLICK HERE TO BOOK](${parts[2]})`;
           await sendTelegramMessage(text);
